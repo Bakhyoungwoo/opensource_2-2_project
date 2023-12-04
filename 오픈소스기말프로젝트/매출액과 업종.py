@@ -31,6 +31,21 @@ colors = ['grey' if category not in [max_category, min_category, closest_to_aver
           'blue' for category in mean_data.index]
 
 # Plotting
+<<<<<<< HEAD
+plt.figure(figsize=(12, 6))  # Adjust figure size for better layout
+mean_data.plot(kind='bar', color=colors)
+plt.title('평균 금액')
+plt.ylabel('금액 (만원)')
+
+# Adding a line for the average and updating the legends with positioning outside the graph
+plt.axhline(y=average_value, color='blue', linestyle='--', label='평균에 가까운 금액')
+plt.legend(handles=[
+    plt.Line2D([0], [0], color='red', lw=4, label='좌석당 최대 매출액'),
+    plt.Line2D([0], [0], color='green', lw=4, label='좌석당 최소 매출액'),
+    plt.Line2D([0], [0], color='blue', lw=4, label='좌석당 평균 매출액'),
+    plt.Line2D([0], [0], color='blue', linestyle='--', lw=2, label='평균에 가까운 금액')
+], loc='upper left', bbox_to_anchor=(1, 1))  # Legend outside the plot
+=======
 plt.figure(figsize=(10, 6))
 mean_data.plot(kind='bar', color=colors)
 plt.title('좌석당 매출액')
@@ -39,6 +54,7 @@ plt.ylabel('금액 (만원)')
 # Adding a line for the average
 plt.axhline(y=average_value, color='blue', linestyle='--', label='평균에 가까운 금액')
 plt.legend()
+>>>>>>> 58876979899903c7a08ed6b217aed947b9ebeb0c
 
 plt.tight_layout()
 plt.show()
