@@ -6,7 +6,7 @@ import seaborn as sns
 
 matplotlib.rcParams['font.family']='Malgun Gothic'
 # Load the data
-file_path = 'opensource_2-2_project-main\오픈소스기말프로젝트\수익성·생산성_분석_22년도_기준.xlsx'
+file_path = '수익성·생산성_분석_22년도_기준.xlsx'
 df = pd.read_excel(file_path)
 
 # Filter the data to exclude '소계' in '특성별(4)' and convert data types
